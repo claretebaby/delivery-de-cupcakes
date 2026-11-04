@@ -7,6 +7,7 @@ import {
   View,
 } from "react-native";
 
+
 export default function HomeScreen() {
   const router = useRouter();
   // cria e exporta o componente da tela inicial
