@@ -1,56 +1,58 @@
-# Welcome to your Expo app 👋
+# Doce Mordida Cupcakes 🧁
 
-This is an [Expo](https://expo.dev) project created with [`create-expo-app`](https://www.npmjs.com/package/create-expo-app).
+## Descrição
+Aplicativo mobile de delivery de cupcakes. O usuário navega pelo cardápio, adiciona produtos ao carrinho, ajusta quantidades e confirma o pedido.
 
-## Get started
+## Objetivo
+Resolver a desorganização de pedidos de doces feitos por mensagem: cardápio disperso, quantidades combinadas manualmente e valor total desconhecido pelo cliente. O app reúne cardápio, carrinho e total em uma interface simples.
 
-1. Install dependencies
+## Tecnologias utilizadas
+- React Native
+- Expo
+- Expo Router
+- JavaScript (e TypeScript no arquivo de tema)
+- Context API
+- StyleSheet
+- Git
+- GitHub
 
-   ```bash
-   npm install
-   ```
+## Funcionalidades
+- ✓ Visualização de produtos por categoria (Clássicos, Frutados, Especiais, Caixas e Combos)
+- ✓ Busca de produtos por nome
+- ✓ Adição ao carrinho
+- ✓ Atualização de quantidade (+ / −)
+- ✓ Remoção de produtos
+- ✓ Contagem de itens
+- ✓ Cálculo do valor total
+- ✓ Tela de confirmação com resumo do pedido
 
-2. Start the app
-
-   ```bash
-   npx expo start
-   ```
-
-In the output, you'll find options to open the app in a
-
-- [development build](https://docs.expo.dev/develop/development-builds/introduction/)
-- [Android emulator](https://docs.expo.dev/workflow/android-studio-emulator/)
-- [iOS simulator](https://docs.expo.dev/workflow/ios-simulator/)
-- [Expo Go](https://expo.dev/go), a limited sandbox for trying out app development with Expo
-
-You can start developing by editing the files inside the **app** directory. This project uses [file-based routing](https://docs.expo.dev/router/introduction).
-
-## Get a fresh project
-
-When you're ready, run:
-
-```bash
-npm run reset-project
+## Estrutura do projeto
+```
+assets
+└── images                 # fotos dos cupcakes
+src
+├── app
+│   ├── _layout.js         # navegação (Stack) e provedor do carrinho
+│   ├── index.js           # tela inicial
+│   ├── cardapio.js        # lista, busca e filtro por categoria
+│   ├── carrinho.js        # itens, quantidades e total
+│   └── confirmacao.js     # resumo do pedido
+├── components
+│   ├── CardProduto.js     # card de produto
+│   └── BarraBusca.js      # campo de busca
+├── context
+│   └── CarrinhoContext.js # estado global do carrinho
+├── data
+│   └── produtos.js        # cardápio
+└── tema.ts                # cores e formatação de preço
 ```
 
-This command will move the starter code to the **app-example** directory and create a blank **app** directory where you can start developing.
+## Como executar
+```bash
+npm install
+npx expo start
+```
+Depois, abra no celular com o app Expo Go (QR Code) ou em um emulador.
 
-### Other setup steps
-
-- To set up ESLint for linting, run `npx expo lint`, or follow our guide on ["Using ESLint and Prettier"](https://docs.expo.dev/guides/using-eslint/)
-- If you'd like to set up unit testing, follow our guide on ["Unit Testing with Jest"](https://docs.expo.dev/develop/unit-testing/)
-- Learn more about the TypeScript setup in this template in our guide on ["Using TypeScript"](https://docs.expo.dev/guides/typescript/)
-
-## Learn more
-
-To learn more about developing your project with Expo, look at the following resources:
-
-- [Expo documentation](https://docs.expo.dev/): Learn fundamentals, or go into advanced topics with our [guides](https://docs.expo.dev/guides).
-- [Learn Expo tutorial](https://docs.expo.dev/tutorial/introduction/): Follow a step-by-step tutorial where you'll create a project that runs on Android, iOS, and the web.
-
-## Join the community
-
-Join our community of developers creating universal apps.
-
-- [Expo on GitHub](https://github.com/expo/expo): View our open source platform and contribute.
-- [Discord community](https://chat.expo.dev): Chat with Expo users and ask questions.
+## Desenvolvedor
+Maria Clara Bezerra Israel
