@@ -2,7 +2,12 @@ import React from "react";
 import { TextInput, StyleSheet } from "react-native";
 import { cores } from "../tema";
 
-export default function BarraBusca({ valor, onChange }) {
+type Props = {
+  valor: string; // texto atual da busca
+  onChange: (texto: string) => void; // chamada a cada letra digitada
+};
+
+export default function BarraBusca({ valor, onChange }: Props) {
   return (
     <TextInput
       style={styles.input}

@@ -45,7 +45,14 @@ export default function Carrinho() {
         contentContainerStyle={{ paddingTop: 14, paddingBottom: 14 }}
         renderItem={({ item }) => (
           <View style={styles.item}>
-            <Image source={typeof item.imagem === 'string' ? { uri: item.imagem } : item.imagem} style={styles.foto}/>
+            <Image
+              source={
+                typeof item.imagem === "string"
+                  ? { uri: item.imagem }
+                  : item.imagem
+              }
+              style={styles.foto}
+            />
 
             <View style={styles.dados}>
               <Text style={styles.nome}>{item.nome}</Text>
@@ -54,9 +61,7 @@ export default function Carrinho() {
               </Text>
 
               <View style={styles.contador}>
-                <TouchableOpacity
-                  onPress={() => alterarQuantidade(item.id, -1)}
-                >
+                <TouchableOpacity onPress={() => alterarQuantidade(item.id, -1)}>
                   <Text style={styles.sinal}>−</Text>
                 </TouchableOpacity>
                 <Text style={styles.qtd}>{item.quantidade}</Text>
