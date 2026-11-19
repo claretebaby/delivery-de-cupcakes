@@ -10,7 +10,7 @@ Resolver a desorganização de pedidos de doces feitos por mensagem: cardápio d
 - React Native
 - Expo
 - Expo Router
-- JavaScript (e TypeScript no arquivo de tema)
+- TypeScript
 - Context API
 - StyleSheet
 - Git
@@ -29,22 +29,23 @@ Resolver a desorganização de pedidos de doces feitos por mensagem: cardápio d
 ## Estrutura do projeto
 ```
 assets
-└── images                 # fotos dos cupcakes
+└── images                   # fotos dos cupcakes
 src
 ├── app
-│   ├── _layout.js         # navegação (Stack) e provedor do carrinho
-│   ├── index.js           # tela inicial
-│   ├── cardapio.js        # lista, busca e filtro por categoria
-│   ├── carrinho.js        # itens, quantidades e total
-│   └── confirmacao.js     # resumo do pedido
+│   ├── _layout.tsx          # navegação (Stack) e provedor do carrinho
+│   ├── index.tsx            # tela inicial
+│   ├── cardapio.tsx         # lista, busca e filtro por categoria
+│   ├── carrinho.tsx         # itens, quantidades e total
+│   └── confirmacao.tsx      # resumo do pedido
 ├── components
-│   ├── CardProduto.js     # card de produto
-│   └── BarraBusca.js      # campo de busca
+│   ├── CardProduto.tsx      # card de produto
+│   └── BarraBusca.tsx       # campo de busca
 ├── context
-│   └── CarrinhoContext.js # estado global do carrinho
+│   └── CarrinhoContext.tsx  # estado global do carrinho
 ├── data
-│   └── produtos.js        # cardápio
-└── tema.ts                # cores e formatação de preço
+│   └── produtos.ts          # cardápio
+├── tema.ts                  # cores e formatação de preço
+└── types.ts                 # tipos Produto e ItemCarrinho
 ```
 
 ## Como executar
